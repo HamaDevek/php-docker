@@ -1,0 +1,25 @@
+{
+    "name": "samhwang/docker-php-template",
+    "description": "A PHP Docker project template",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sam Huynh",
+            "email": "samhwang2112.dev@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Setup\\": "scripts"
+        }
+    },
+    "scripts": {
+        "setup": [
+            "Setup\\Installer::postInstall"
+        ]
+    }
+}

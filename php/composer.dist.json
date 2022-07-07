@@ -1,0 +1,43 @@
+{
+    "name": "vendor_name/project_name",
+    "description": "project_description",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "author_name",
+            "email": "author_email@mail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "vlucas/phpdotenv": "3.*",
+        "php-di/php-di": "^6.1"
+    },
+    "require-dev": {
+        "phpmd/phpmd": "2.*",
+        "phpunit/phpunit": "9.*",
+        "sebastian/phpcpd": "4.*",
+        "squizlabs/php_codesniffer": "3.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/App"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "App\\": "tests/App"
+        }
+    },
+    "config": {
+        "platform": {
+            "php": "7.4"
+        },
+        "sort-packages": true
+    },
+    "scripts": {
+        "test": "phpdbg -qrr ./vendor/bin/phpunit tests",
+        "code-coverage": "php -d pcov.enabled=1 ./vendor/bin/phpunit tests"
+    }
+}
